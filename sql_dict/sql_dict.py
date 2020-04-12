@@ -41,7 +41,7 @@ class SQLDict(MutableMapping):
         return map(itemgetter[0], c.fetchall())
 
     def __repr__(self):
-        return f'{type(self).__name__}(dbname={self.dbname!r}, items={list(self.items())})'
+        return f'{type(self.__name__)}(dbname={self.dbname!r}, items={list(self.items())})'
 
     def close(self):
         self.conn.close()
